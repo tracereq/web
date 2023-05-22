@@ -15,20 +15,20 @@ import AppHeader from "../components/AppHeader.astro"
 
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=UA-265998866-1">
-    </script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-265998866-1");
-    </script>
-
   </head>
+  <script
+    type="text/partytown"
+    src="https://www.googletagmanager.com/gtag/js?id=UA-265998866-1">
+  </script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-265998866-1");
+  </script>
+
   <body class="bg-white dark:bg-gray-900">
     <AppHeader/>
     <slot />
