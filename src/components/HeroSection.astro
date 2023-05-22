@@ -1,0 +1,89 @@
+---
+import Container from "./Container.astro"
+import { Code } from 'astro/components';
+import { Prism } from '@astrojs/prism';
+
+---
+
+<div class="relative" id="home">
+    <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+    </div>
+    <Container>
+
+        <div class="relative py-36 ml-auto justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+
+
+    <div class="md:5/12 lg:w-1/2">
+        <Code lang="python" theme="dracula-soft" code=
+        {`from flask import Flask
+import tracereq
+
+# starting Flask app
+app = Flask(__name__)
+
+# initialise tracereq to start tracing
+tracereq.init(flask_wsgi_app=app.wsgi_app, token='auth_token')
+        `}
+/>
+</div>
+
+            <div class="md:7/12 lg:w-1/2">
+                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Visualize your application <br/> <span class="text-primary dark:text-white">API journeys</span></h1>
+
+                <p class="text-xl text-gray-600 dark:text-gray-300 py-6">
+                  
+                  <span class="font-bold">Get integrated with only 1 line of code</span>
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-y-4 gap-x-6">
+                    <a
+                      href="#"
+                      target="new"
+                      class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                    >
+                      <span class="relative text-base font-semibold text-white"
+                        >Get started</span
+                      >
+                    </a>
+                    <a
+                      href="https://docs.tracereq.com/"
+                      target="new"
+                      class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
+                    >
+                      <span
+                        class="relative text-base font-semibold text-primary dark:text-white"
+                        >Learn more</span
+                      >
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </Container>
+</div>
+
+<style is:global>
+    .astro-code {
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    code {
+      counter-reset: step;
+      counter-increment: step 0;
+      @apply text-xs md:text-sm;
+    }
+    
+    code .line::before {
+      content: counter(step);
+      counter-increment: step;
+      width: 1rem;
+      margin-right: 1.5rem;
+      display: inline-block;
+      text-align: right;
+      color: rgba(115,138,148,.4)
+    }
+</style>
