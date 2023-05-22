@@ -6,30 +6,44 @@ import AppHeader from "../components/AppHeader.astro"
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="description" content="Visualise application request journeys">
-		<title>TraceReq | Visualise application request journeys</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="description" content="Visualise application request journeys">
+    <title>TraceReq | Visualise application request journeys</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body class="bg-white dark:bg-gray-900">
-		<AppHeader/>
-		<slot />
-		<AppFooter/>
-	</body>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=UA-265998866-1">
+    </script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-265998866-1");
+    </script>
+
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <AppHeader/>
+    <slot />
+    <AppFooter/>
+  </body>
 </html>
 <style>
-	html {
-		font-family: Urbanist, sans-serif;
-		scroll-behavior: smooth;
-	}
+  html {
+    font-family: Urbanist, sans-serif;
+    scroll-behavior: smooth;
+  }
 
-	body {
-		margin: 0;
-	}
+  body {
+    margin: 0;
+  }
 </style>
 <script is:inline>
   const theme = (() => {
