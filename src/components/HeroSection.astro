@@ -24,7 +24,7 @@ import tracereq
 app = Flask(__name__)
 
 # initialise tracereq to start tracing
-tracereq.init(flask_wsgi_app=app.wsgi_app, token='auth_token')
+tracereq.init(token='my_tracereq_token')
         `}
 />
 </div>
@@ -39,7 +39,7 @@ tracereq.init(flask_wsgi_app=app.wsgi_app, token='auth_token')
 
                 <div class="mt-6 flex flex-wrap gap-y-4 gap-x-6">
                     <a
-                      href="#"
+                      href="mailto:hello@tracereq.com"
                       target="new"
                       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                     >
