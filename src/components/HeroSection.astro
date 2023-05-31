@@ -5,14 +5,13 @@ import { Prism } from '@astrojs/prism';
 
 ---
 
-<div class="relative" id="home">
+<div class="relative pb-16" id="home">
     <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
         <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
         <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
     </div>
     <Container>
-
-        <div class="relative pt-72 pb-40 ml-auto justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+        <div class="relative pt-72 pb-16 ml-auto justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
 
 
     <div class="md:5/12 lg:w-1/2">
@@ -23,8 +22,10 @@ import tracereq
 # starting Flask app
 app = Flask(__name__)
 
-# initialise tracereq to start tracing
-tracereq.init(token='my_tracereq_token')
+# initialise to start tracking API requests automatically
+tracereq.init(api_key='xxx-xxx',
+    flask_app=app.wsgi_app
+)
         `}
 />
 </div>
@@ -34,7 +35,7 @@ tracereq.init(token='my_tracereq_token')
 
                 <p class="text-xl text-gray-600 dark:text-gray-300 py-6">
                   
-                  <span class="font-bold">Get integrated with only 1 line of code</span>
+                  <span class="font-bold">Get integrated with just 1 line of code</span>
                 </p>
 
                 <div class="mt-6 flex flex-wrap gap-y-4 gap-x-6">
@@ -61,6 +62,22 @@ tracereq.init(token='my_tracereq_token')
             </div>
 
 
+        </div>
+        <div class="lg:w-3/4 text-center mx-auto">
+                <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
+                    <div class="text-left">
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Low overhead</h6>
+                        <p class="mt-2 text-gray-500">No performance impact on applications</p>
+                    </div>
+                    <div class="text-left">
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Application-level transparency</h6>
+                        <p class="mt-2 text-gray-500">No dependency from developers</p>
+                    </div>
+                    <div class="text-left">
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Scalable</h6>
+                        <p class="mt-2 text-gray-500">Withstands size of services</p>
+                    </div>
+                </div>
         </div>
     </Container>
 </div>
