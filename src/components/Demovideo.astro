@@ -1,0 +1,22 @@
+---
+import Container from "./Container.astro"
+
+---
+
+
+<div id="demo-video" class="mt-10 space-y-10">
+  <Container>
+    <div class="lg:w-2/3 text-center mx-auto">
+      <h1 class="text-gray-900 dark:text-white font-light text-2xl">SHORT INTRO VIDEO</h1>
+    </div>
+
+    <div class="mt-6 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden text-gray-600 dark:border-gray-700 text-center">
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="relative space-y-8 py-8 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800 rounded-3xl border border-gray-100">
+          <iframe width="896" height="504" src="https://www.youtube-nocookie.com/embed/PAuu_9gzk2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </Container>
+</div>
