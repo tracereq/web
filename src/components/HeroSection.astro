@@ -5,6 +5,7 @@ import { Prism } from '@astrojs/prism';
 
 ---
 
+
 <div class="relative pb-16" id="home">
     <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
         <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
@@ -12,10 +13,9 @@ import { Prism } from '@astrojs/prism';
     </div>
     <Container>
         <div class="relative pt-72 pb-16 ml-auto justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+            <div class="md:5/12 lg:w-1/2">
 
-
-    <div class="md:5/12 lg:w-1/2">
-        <Code lang="python" theme="dracula-soft" code=
+                <Code lang="python" theme="dracula-soft" code=
         {`from flask import Flask
 import tracereq_sdk
 
@@ -28,50 +28,47 @@ tracereq_sdk.init(api_key='xxx-xxx',
 )
         `}
 />
-</div>
-
+            </div>
             <div class="md:7/12 lg:w-1/2">
-                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Visualize your application <br/> <span class="text-primary dark:text-white">API journeys</span></h1>
-
+                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Visualize your application 
+                    <br/>
+                    <span class="text-primary dark:text-white">API journeys</span>
+                </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300 py-6">
-                  
-                  <span class="font-bold">Get integrated with just 1 line of code</span>
+                    <span class="font-bold">Get integrated with just 1 line of code</span>
                 </p>
-
                 <div class="mt-6 flex flex-wrap gap-y-4 gap-x-6">
                     <a
                       href="https://calendly.com/tracereq/demo"
                       target="new"
                       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                     >
-                      <span class="relative text-base font-semibold text-white"
+                        <span class="relative text-base font-semibold text-white"
                         >Book demo</span
                       >
                     </a>
                 </div>
             </div>
-
-
         </div>
+
         <div class="lg:w-3/4 text-center mx-auto">
-                <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Low overhead</h6>
-                        <p class="mt-2 text-gray-500">No performance impact on applications</p>
-                    </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Application-level transparency</h6>
-                        <p class="mt-2 text-gray-500">No dependency from developers</p>
-                    </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Scalable</h6>
-                        <p class="mt-2 text-gray-500">Withstands size of services</p>
-                    </div>
+            <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
+                <div class="text-left">
+                    <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Low overhead</h6>
+                    <p class="mt-2 text-gray-500">No performance impact on applications</p>
                 </div>
+                <div class="text-left">
+                    <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Application-level transparency</h6>
+                    <p class="mt-2 text-gray-500">No dependency from developers</p>
+                </div>
+                <div class="text-left">
+                    <h6 class="text-lg font-semibold text-gray-700 dark:text-white">Scalable</h6>
+                    <p class="mt-2 text-gray-500">Withstands size of services</p>
+                </div>
+            </div>
         </div>
     </Container>
 </div>
-
 <style is:global>
     .astro-code {
         padding: 10px;
